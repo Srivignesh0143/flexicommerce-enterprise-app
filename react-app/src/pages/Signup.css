@@ -1,0 +1,7 @@
+/* Signup shares all styles from Login.css (auth-page-simple) */
+/* Only signup-specific overrides go here */
+
+/* Slightly wider card for the extra fields */
+.auth-page-simple .auth-card-container {
+    max-width: 460px;
+}

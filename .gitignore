@@ -1,0 +1,33 @@
+# Secrets & credentials
+aws.txt
+contabo.txt
+flexicommerce.pem
+*.pem
+
+# Deployment artifacts
+deploy.tar.gz
+*.tar.gz
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

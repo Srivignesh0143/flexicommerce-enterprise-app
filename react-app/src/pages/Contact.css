@@ -1,0 +1,293 @@
+/* ===== CONTACT — Premium Contact Page ===== */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.contact-info-card {
+    text-align: center;
+    padding: 36px 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-slow);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-500), var(--primary-700));
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--primary-200);
+}
+
+.contact-info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-info-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+    color: var(--primary-600);
+    border-radius: var(--radius-lg);
+    margin: 0 auto 18px;
+    transition: all var(--transition-base);
+}
+
+.contact-info-card:hover .contact-info-icon {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: var(--white);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.contact-info-card h3 {
+    font-size: 0.938rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.contact-info-card p {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.contact-info-card span {
+    font-size: 0.813rem;
+    color: var(--gray-500);
+}
+
+/* ===== CONTACT CONTENT ===== */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form-wrapper h2,
+.contact-map h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.contact-form-wrapper > p {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-bottom: 28px;
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-card);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 13px 16px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-size: 0.938rem;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    transition: all var(--transition-base);
+    resize: vertical;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: var(--gray-300);
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-500);
+    background: var(--white);
+    box-shadow: var(--shadow-glow);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-400);
+}
+
+.form-success {
+    padding: 14px 20px;
+    background: rgba(16, 185, 129, 0.08);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Map */
+.contact-map h2 {
+    margin-bottom: 20px;
+}
+
+.map-container {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-base);
+}
+
+.map-container:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
+
+/* ===== CONTACT TOAST ===== */
+.contact-toast {
+    position: fixed;
+    top: 88px;
+    right: 24px;
+    z-index: 9999;
+    animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    padding: 18px 28px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-100);
+}
+
+.contact-toast.success .toast-content {
+    border-left: 4px solid var(--success);
+}
+
+.contact-toast.error .toast-content {
+    border-left: 4px solid var(--danger);
+}
+
+.toast-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.contact-toast.success .toast-icon {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--success);
+}
+
+.contact-toast.error .toast-icon {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--danger);
+}
+
+.toast-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+@keyframes toastSlideIn {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-toast {
+        right: 16px;
+        left: 16px;
+        top: 80px;
+        width: calc(100% - 32px);
+    }
+    .toast-content {
+        justify-content: center;
+    }
+}
