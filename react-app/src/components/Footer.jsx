@@ -10,10 +10,10 @@ const DEFAULT_BRANDING = {
     appNamePart2: 'Commerce',
     footerDesc: 'Your one-stop destination for premium products at unbeatable prices. We deliver quality, style, and value right to your doorstep.',
     footerCopyright: '© 2026 Flexi Commerce. All rights reserved.',
-    contactPhoneValue: '+91 9003948329',
-    contactAddressValue: 'Kanagapuram, Vellode',
+    contactPhoneValue: '+91 6369333565',
+    contactAddressValue: 'Tiruchengode',
     contactAddressSubtext: 'Erode - 638112',
-    contactPersonValue: 'MohanRaja V',
+    contactPersonValue: 'SRIVIGNESH S',
     contactHoursValue: 'Mon - Sat',
     contactHoursSubtext: '9:00 AM - 8:00 PM',
 };
