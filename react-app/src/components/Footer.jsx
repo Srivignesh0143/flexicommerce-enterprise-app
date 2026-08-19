@@ -12,10 +12,11 @@ const DEFAULT_BRANDING = {
     footerCopyright: '© 2026 Flexi Commerce. All rights reserved.',
     contactPhoneValue: '+91 6369333565',
     contactAddressValue: 'Tiruchengode',
+    contactAddressValue: 'Pudhupuliyampatti,Tiruchengode',
     contactAddressSubtext: 'Erode - 638112',
     contactPersonValue: 'SRIVIGNESH S',
     contactHoursValue: 'Mon - Sat',
-    contactHoursSubtext: '9:00 AM - 8:00 PM',
+    contactHoursSubtext: '9:00 AM - 6:00 PM',
 };
 
 const Footer = () => {
